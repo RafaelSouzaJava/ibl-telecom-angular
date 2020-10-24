@@ -1,0 +1,132 @@
+
+.slid1 {
+  height: 40%;  
+  }
+
+.card-header-second {
+  box-shadow: 1px 7px 15px #a2a2a2;
+  margin: 0px -27px 0px -27px;
+  height: 120px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+ }
+
+ .card-section-third span i{
+   padding: 17px;
+   margin: 10px 10px;
+ }
+
+.bgcard {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+
+.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.carousel-item-prev.carousel-item-right + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+  position: relative;
+  transform: translate3d(100%, 0 , 0);
+  visibility: visible;
+  display: block;
+  
+}
+
+ @media (min-width: 668px) {
+
+  .carousel1.active,
+  .carousel1 .active + .carousel-item,
+  .carousel1 .active + .carousel-item + .carousel-item
+{
+    display: block;
+    text-align: center;
+  }
+
+ }
+
+ @media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.text1{
+  text-align: left; 
+   
+  margin-right: -22px;
+  margin-left: -16px;
+}
+
+.central {
+    margin-left: 1110px;
+}
+
+h3{
+ float: left;
+ margin-left: -100%;
+ margin-right: 10%;
+ margin-top: 5%;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  .card-container > *:not(.circle-link) ,
+  .terminal {
+    width: 100%;
+  }
+  .container2 {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+ 
+  }
+
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+
+  svg#rocket-smoke {
+    right: 120px;
+    transform: rotate(-5deg);
+  }
+}
+
+.informa {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.corbody {
+  background: #C9CCD3;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: lighten;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+
+

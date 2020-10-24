@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+<div class="corbody">
+
+
+    <div class="container-fluid mt-1 ">
+        <div class="card-section border text-dark  ml-4mr-4 ">
+            <div class="card-header card-header-second rounded ">
+                <h2 class="card-header-title mb-3 mt-1 text-center ">Planos Internet Fibra Ótica</h2>
+            </div>
+            <div class="carousel-inner carousel1 row  mx-auto ">
+                <div class="carousel-item col-md-4 active border borda bgcard rounded" *ngFor="let plano of planos">
+                    <div class="card-dark text-center ">
+                        <img class="card-img-top img1 "  src="assets/imgs/plano2.jpg">
+                        <div class="card-body texto">
+                            <h6 class="card-title  ">
+                                {{plano.nome}}</h6>
+                            <h6 class="card-title  ">Download:
+                                {{plano.download}}</h6>
+                            <h6 class="card-title">Upload: {{plano.upload}}</h6>
+                            <p class="card-text mb-1">{{plano.detalhes}}</p>
+                            <p class="card-text mb-1">Mensalidade: {{plano.mensalidade | currency}}</p>
+                            <p class="card-text mb-1">Instalação: {{plano.instalacao | currency}}</p>
+                            <p class="card-text mb-3">Fidelidade: {{plano.fidelidade}}</p>
+                            <hr>
+                            <p class="card-text promocao1">{{plano.promocao}}</p>
+                            <hr>
+                            <a href="#" class="card-link text-muted " data-toggle="modal"
+                                data-target="#siteModal"><ins>Contrato</ins></a>
+                        </div>
+                        <div class="card-body">
+                            <button class="card-link btn btn-success efeito botao" (click)="cadastra()">
+                                Assine já
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="col-12 ">
+            <hr>
+        </div>
+        <div class="row  rodape ">
+
+            <div class="col-sm-4">
+                <img src="assets/imgs/IBL-TELECOM-LOGO.png" class="img2 " alt="logo">
+                <h5 class="text-center text-white" style="font-size: 16px;">Quem somos</h5>
+                <p style="font-size: 14px; " class="text-white text-center">Fornecemos soluções de telecomunicaçãohá
+                    mais de 15 anos.
+                    Estabelecer um relacionamento duradouro com nossos clientes é nosso objetivo final,
+                    que pretendemos alcançar ao apoiar sua instalação e garatir que você seja informado sobre quaisquer
+                    desenvolvimentos em tecnologia que possam melhorar ainda mais o sucesso de seus negócios.
+                </p>
+
+            </div>
+
+            <div class="col-sm-4 text-center">
+
+                <h5 class="text-center text-white" style="font-size: 16px;">Contato</h5>
+                <p style="font-size: 13px; margin-top: 1%;" class="text-white">Endereço: Rua 03 n°381, Parque Santana
+                    Fortaleza-ce</p>
+                <p style="font-size: 13px; margin-top: -5%;" class="text-white">Telefone: (85) 3298-3648</p>
+                <p style="font-size: 13px; margin-top: -5%;" class="text-white">Whatsapp:<a class="text-white"
+                        href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                        target="_blank"> (85) 98611-6833 </a></p>
+                <p style="font-size: 13px; margin-top: -5%;" class="text-white">E-mail: <a class="text-white"
+                        href="mailto:suportematelecom@outlook.com"> suportematelecom@outlook.com</a></p>
+
+                <h5 class="text-center text-white" style="font-size: 16px; margin-top: -2%;">Menu</h5>
+                <div class="list-group text-center ">
+                    <a class="text-white" style="font-size: 13px;" href="#">Perfil</a>
+                    <a class="text-white" style="font-size: 13px;" [routerLink]="[ '/contato' ]"
+                        routerLinkActive="active">Contato</a>
+                    <a class="text-white" style="font-size: 13px;" [routerLink]="[ '/planos' ]"
+                        routerLinkActive="active">Planos</a>
+                    <a class="text-white" style="font-size: 13px;" href="https://ibltelecom.gesprov.com.br/central"
+                        target="_blank">Acesso do Cliente</a>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4 ">
+
+                <h5 class="text-center text-white" style="font-size: 16px;">Redes Sociais</h5>
+                <div class="btn-group-vertical btn-block btn-group-sm" role="group">
+                    <a class="btn btn-primary text-white" href="#">Facebook</a>
+                    <a class="btn btn-info text-white" href="#">Instagram</a>
+                    <a class="btn btn-warning text-white"
+                        href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                        target="_blank"> Whatsapp</a>
+                    <a class="btn btn-success text-white" href="https://ibltelecom.gesprov.com.br/central"
+                        target="_blank">Central do Cliente</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 ">
+            <hr>
+        </div>
+        <div class="col-12 mt-1 ">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0" style="font-size: 13px;">Desenvolvido por Rafael Souza</p>
+                <footer class="blockquote-footer" style="font-size: 10px;">Tecnologias utiliza:<cite
+                        title="Titulo">Java,
+                        Spring, Bootstrap, Angular, Amazon, mysql</cite></footer>
+            </blockquote>
+        </div>
+
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Contrato de Fidelidade</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>texto do contrato a ser exibito</p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

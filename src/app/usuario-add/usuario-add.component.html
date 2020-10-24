@@ -1,0 +1,121 @@
+<div class="corbody">
+
+    <div class="container">
+        <h2 class="text-center">Cadastro de Usuarios</h2>
+        <form style="padding: 10px;" #formValidate="ngForm">
+
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                    <label for="id">ID</label>
+                    <input type="text" [(ngModel)]="usuario.id" class="form-control" name="id" id="id" readonly="true"
+                        autocomplete="false" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6" style="margin-top: 3%;">
+                    <label for="login">Login</label>
+                    <input type="text" [(ngModel)]="usuario.login" class="form-control" name="login" id="login"
+                        placeholder="Login" autocomplete="false" required="true" />
+                </div>
+
+
+                <div class="form-group col-md-6" style="margin-top: 3%;">
+                    <label for="nome">Nome</label>
+                    <input type="text" [(ngModel)]="usuario.nome" class="form-control" name="nome" id="nome"
+                        autocomplete="false" placeholder="Nome" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6" style="margin-top: 3%;">
+                    <label for="email">Email</label>
+                    <input type="email" [(ngModel)]="usuario.email" class="form-control" name="email" id="email"
+                        placeholder="Email" autocomplete="false" required>
+                </div>
+
+                <div class="form-group col-md-6" style="margin-top: 3%;">
+                    <label for="senha">Senha</label>
+                    <input type="password" [(ngModel)]="usuario.senha" class="form-control" name="senha" id="senha"
+                        placeholder="Senha" autocomplete="false" required>
+                </div>
+            </div>
+
+            <button type="button" [routerLink]="['/usuarios']" class="btn btn-primary">Voltar</button>
+            <button type="button" class="btn btn-primary" (click)="novo()" style="margin-left: 2%;">Novo</button>
+            <button type="button" (click)="salvarUsuario()" [disabled]="formValidate.invalid" class="btn btn-primary"
+                style="margin-left: 2%;">Salvar</button>
+        </form>
+
+
+
+        <div class="col-12 ">
+            <hr>
+        </div>
+        <div class="row  rodape ">
+
+            <div class="col-sm-4">
+                <img src="assets/imgs/IBL-TELECOM-LOGO.png" class="img2 " alt="logo">
+                <h5 class="text-center text-white" style="font-size: 16px;">Quem somos</h5>
+                <p style="font-size: 13px; " class="text-white text-center">Fornecemos soluções de telecomunicaçãohá
+                    mais de
+                    15 anos.
+                    Estabelecer um relacionamento duradouro com nossos clientes é nosso objetivo final,
+                    que pretendemos alcançar ao apoiar sua instalação e garatir que você seja informado sobre quaisquer
+                    desenvolvimentos em tecnologia que possam melhorar ainda mais o sucesso de seus negócios.
+                </p>
+
+            </div>
+
+            <div class="col-sm-4 text-center">
+
+                <h5 class="text-center text-white" style="font-size: 16px;">Contato</h5>
+                <p style="font-size: 12px; margin-top: 1%;" class="text-white">Endereço: Rua 03 n°381, Parque Santana
+                    Fortaleza-ce</p>
+                <p style="font-size: 12px; margin-top: -5%;" class="text-white">Telefone: (85) 3298-3648</p>
+                <p style="font-size: 12px; margin-top: -5%;" class="text-white">Whatsapp:<a class="text-white"
+                        href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                        target="_blank"> (85) 98611-6833 </a></p>
+                <p style="font-size: 12px; margin-top: -5%;" class="text-white">E-mail: <a class="text-white"
+                        href="mailto:suportematelecom@outlook.com"> suportematelecom@outlook.com</a></p>
+
+                <h5 class="text-center text-white" style="font-size: 16px; margin-top: -2%;">Menu</h5>
+                <div class="list-group text-center ">
+                    <a class="text-white" style="font-size: 12px;" href="#">Perfil</a>
+                    <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/contato' ]"
+                        routerLinkActive="active">Contato</a>
+                    <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/planos' ]"
+                        routerLinkActive="active">Planos</a>
+                    <a class="text-white" style="font-size: 12px;" href="https://ibltelecom.gesprov.com.br/central"
+                        target="_blank">Acesso do Cliente</a>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4 ">
+
+                <h5 class="text-center text-white" style="font-size: 16px;">Redes Sociais</h5>
+                <div class="btn-group-vertical btn-block btn-group-sm" role="group">
+                    <a class="btn btn-primary text-white" href="#">Facebook</a>
+                    <a class="btn btn-info text-white" href="#">Instagram</a>
+                    <a class="btn btn-warning text-white"
+                        href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                        target="_blank"> Whatsapp</a>
+                    <a class="btn btn-success text-white" href="https://ibltelecom.gesprov.com.br/central"
+                        target="_blank">Central do Cliente</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 ">
+            <hr>
+        </div>
+        <div class=" mt-1 ">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0" style="font-size: 12px;">Desenvolvido por Rafael Souza</p>
+                <footer class="blockquote-footer" style="font-size: 10px;">Tecnologias utiliza:<cite
+                        title="Titulo">Java,
+                        Spring security, Bootstrap, Angular, Amazon, mysql</cite></footer>
+            </blockquote>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="corbody">
+
+    <section>
+        <div class="container" style="width: 80%; padding-bottom: 30px; font-weight: bold;">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style=" padding-left: 43%;">
+                    <li class="breadcrumb-item active" aria-current="page">Manutenção</li>
+                </ol>
+            </nav>
+            <div class="card shadow-sm bg-white eounded" *ngFor="let item of items"  style="margin-top: 20px;">
+                <div class="card-body">
+                    <p class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">
+                        <i class="material-icons">person_outline</i> {{item.autor}}
+                        <i class="material-icons">date_range</i> {{item.data}}
+                    </p>
+                    <h4 class="card-title text-center" style="font-weight: bold; color: black; padding-top: 5px;">
+                        {{item.titulo}}
+                    </h4>
+
+                    <p class="card-text text-center">
+                        {{item.texto}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="text-center">
+        <pagination-controls (pageChange)="p = $event;" previousLabel="Voltar" nextLabel="Avançar"
+            responsive="true"></pagination-controls>
+
+    </div>
+
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="row  rodape ">
+
+        <div class="col-sm-4">
+            <img src="assets/imgs/IBL-TELECOM-LOGO.png" class="img2 " alt="logo">
+            <h5 class="text-center text-white" style="font-size: 16px;">Quem somos</h5>
+            <p style="font-size: 13px; " class="text-white text-center">Fornecemos soluções de telecomunicaçãohá mais de
+                15
+                anos.
+                Estabelecer um relacionamento duradouro com nossos clientes é nosso objetivo final,
+                que pretendemos alcançar ao apoiar sua instalação e garatir que você seja informado sobre quaisquer
+                desenvolvimentos em tecnologia que possam melhorar ainda mais o sucesso de seus negócios.
+            </p>
+
+        </div>
+
+        <div class="col-sm-4 text-center">
+
+            <h5 class="text-center text-white" style="font-size: 16px;">Contato</h5>
+            <p style="font-size: 12px; margin-top: 1%;" class="text-white">Endereço: Rua 03 n°381, Parque Santana
+                Fortaleza-ce</p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">Telefone: (85) 3298-3648</p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">Whatsapp:<a class="text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank">
+                    (85) 98611-6833 </a></p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">E-mail: <a class="text-white"
+                    href="mailto:suportematelecom@outlook.com"> suportematelecom@outlook.com</a></p>
+
+            <h5 class="text-center text-white" style="font-size: 16px; margin-top: -2%;">Menu</h5>
+            <div class="list-group text-center ">
+                <a class="text-white" style="font-size: 12px;" href="#">Perfil</a>
+                <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/contato' ]"
+                    routerLinkActive="active">Contato</a>
+                <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/planos' ]"
+                    routerLinkActive="active">Planos</a>
+                <a class="text-white" style="font-size: 12px;" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Acesso do Cliente</a>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4 ">
+
+            <h5 class="text-center text-white" style="font-size: 16px;">Redes Sociais</h5>
+            <div class="btn-group-vertical btn-block btn-group-sm" role="group">
+                <a class="btn btn-primary text-white" href="#">Facebook</a>
+                <a class="btn btn-info text-white" href="#">Instagram</a>
+                <a class="btn btn-warning text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank">
+                    Whatsapp</a>
+                <a class="btn btn-success text-white" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Central
+                    do Cliente</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="col-12 mt-1 ">
+        <blockquote class="blockquote text-center">
+            <p class="mb-0" style="font-size: 12px;">Desenvolvido por Rafael Souza</p>
+            <footer class="blockquote-footer" style="font-size: 10px;">Tecnologias utiliza:<cite title="Titulo">Java,
+                    Spring, Bootstrap, Angular, Amazon, mysql</cite></footer>
+        </blockquote>
+    </div>
+
+</div>

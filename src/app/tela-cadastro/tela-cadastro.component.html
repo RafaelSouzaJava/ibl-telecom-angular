@@ -1,0 +1,201 @@
+<div class="corbody">
+
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="signupUser(); $event.preventDefault()">
+
+            
+            
+            <div class="form-row">
+
+
+                <div class="form-group col-md-4" style="margin-top: 3%;">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome"
+                        required />
+                </div>
+
+                <div class="form-group col-md-2"  style="margin-top: 3%;">
+                    <label for="tipo">Tipo Cliente</label>
+                    <select formControlName="tipo" class="custom-select" required>
+                        <option value="1"> CPF </option>
+                        <option value="2"> CNPJ </option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3"  style="margin-top: 3%;">
+                    <label for="cpfOuCnpj">CPF ou CNPJ</label>
+                    <input type="text"  class="form-control" formControlName="cpfOuCnpj" id="cpfOuCnpj" placeholder="CPF"
+                        required>
+                </div>
+
+                <div class="form-group col-md-3"  style="margin-top: 3%;">
+                    <label for="rg">Rg</label>
+                    <input type="text" class="form-control" formControlName="rg" id="rg" placeholder="RG" required>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="email">E-mail</label>
+                    <input type="text" class="form-control" formControlName="email" id="email" placeholder="E-Mail"
+                        required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="text"  class="form-control" formControlName="dataNascimento" id="nascimento" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="telefone1">Telefone 1</label>
+                    <input type="tel"  class="form-control" formControlName="telefone1" id="telefone1" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="telefone2">Telecone 2</label>
+                    <input type="tel"  class="form-control" formControlName="telefone2" id="telefone2">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="logradouroId">Endereço</label>
+                    <select formControlName="logradouroId" class="custom-select form-control" required>
+                        
+                        <option *ngFor="let item of logradouros" [value]="item.id">{{item.logradouro}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" formControlName="complemento" class="form-control" id="complemento"
+                        placeholder="Complemento">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="numero">Numero</label>
+                    <input type="text" formControlName="numero" class="form-control" id="numero" placeholder="n°"
+                        required>
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="cep">CEP</label>
+                    <input type="text"  formControlName="cep" class="form-control" id="cep" placeholder="CEP">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="bairroId">Bairro</label>
+                    <select formControlName="bairroId" class="custom-select" required>
+                        
+                        <option *ngFor="let item of bairros" [value]="item.id" >{{item.bairro}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="planos">Planos</label>
+                    <select formControlName="planosId" class="custom-select" required>
+                        <option value=""></option>
+                        <option *ngFor="let item of items;" [value]="item.id" selected="f">{{item.download}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="venvimento">Vencimento</label>
+                    <select formControlName="vencimento" class="custom-select" required>
+                        <option value="1"> 05 </option>
+                        <option value="2"> 10 </option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="formaPagamento">Pagamento</label>
+                    <select formControlName="formaPagamento" class="custom-select" required>
+                        <option value="1"> AVISTA </option>
+                        <option value="2"> CARTÃO </option>
+                    </select>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            
+            <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="row  rodape ">
+
+        <div class="col-sm-4">
+            <img src="assets/imgs/IBL-TELECOM-LOGO.png" class="img2 " alt="logo">
+            <h5 class="text-center text-white" style="font-size: 16px;">Quem somos</h5>
+            <p style="font-size: 13px; " class="text-white text-center">Fornecemos soluções de telecomunicaçãohá mais de
+                15 anos.
+                Estabelecer um relacionamento duradouro com nossos clientes é nosso objetivo final,
+                que pretendemos alcançar ao apoiar sua instalação e garatir que você seja informado sobre quaisquer
+                desenvolvimentos em tecnologia que possam melhorar ainda mais o sucesso de seus negócios.
+            </p>
+
+        </div>
+
+        <div class="col-sm-4 text-center">
+
+            <h5 class="text-center text-white" style="font-size: 16px;">Contato</h5>
+            <p style="font-size: 12px; margin-top: 1%;" class="text-white">Endereço: Rua 03 n°381, Parque Santana
+                Fortaleza-ce</p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">Telefone: (85) 3298-3648</p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">Whatsapp:<a class="text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank"> (85) 98611-6833 </a></p>
+            <p style="font-size: 12px; margin-top: -5%;" class="text-white">E-mail: <a class="text-white"
+                    href="mailto:suportematelecom@outlook.com"> suportematelecom@outlook.com</a></p>
+
+            <h5 class="text-center text-white" style="font-size: 16px; margin-top: -2%;">Menu</h5>
+            <div class="list-group text-center ">
+                <a class="text-white" style="font-size: 12px;" href="#">Perfil</a>
+                <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/contato' ]"
+                    routerLinkActive="active">Contato</a>
+                <a class="text-white" style="font-size: 12px;" [routerLink]="[ '/planos' ]"
+                    routerLinkActive="active">Planos</a>
+                <a class="text-white" style="font-size: 12px;" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Acesso do Cliente</a>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4 ">
+
+            <h5 class="text-center text-white" style="font-size: 16px;">Redes Sociais</h5>
+            <div class="btn-group-vertical btn-block btn-group-sm" role="group">
+                <a class="btn btn-primary text-white" href="#">Facebook</a>
+                <a class="btn btn-info text-white" href="#">Instagram</a>
+                <a class="btn btn-warning text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank"> Whatsapp</a>
+                <a class="btn btn-success text-white" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Central do Cliente</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="col-12 mt-1 ">
+        <blockquote class="blockquote text-center">
+            <p class="mb-0" style="font-size: 12px;">Desenvolvido por Rafael Souza</p>
+            <footer class="blockquote-footer" style="font-size: 10px;">Tecnologias utiliza:<cite title="Titulo">Java,
+                    Spring security, Bootstrap, Angular, Amazon, mysql</cite></footer>
+        </blockquote>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>

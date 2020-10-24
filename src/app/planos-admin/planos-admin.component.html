@@ -1,0 +1,80 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/administrador">Graficos e informação</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/clienteCadastrados">Clientes Cadastrados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/planosadmin">Planos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink="/administrador">Combos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/usuarios">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/postadmin">Post de Manutenção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  btn" (click)="sair()">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<form class="form-inline my-4">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" id="download" name="download" [(ngModel)]="download" placeholder="Pesquisa por Nome">
+    </div>
+    <button type="button" (click)="consultaPlano()" class="btn btn-primary mb-2 md-2">Buscar</button>
+    <button type="button" [routerLink]="['/planoAdd']" routerLinkActive="router-link-active" class="btn btn-success mb-2 mx-sm-3">Novo Plano</button>
+  </form>
+
+<!--TABLE-->
+<table class="table my-4">
+    <thead class="table-info">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">DOWNLOAD</th>
+            <th scope="col">UPLOAD</th>
+            <th scope="col">MENSALIDADE</th>
+            <th scope="col">INSTALAÇÃO</th>
+            <th scope="col">FIDELIDADE</th>
+            <th scope="col">DELETAR</th>
+            <th scope="col">EDITAR</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let plano of planos ">
+            <td scope="row" >{{plano.id}}</td>
+            <td class="btn">{{plano.nome}}</td>
+            <td>{{plano.download}}</td>
+            <td>{{plano.upload}}</td>
+            <td>{{plano.mensalidade}}</td>
+            <td>{{plano.instalacao}}</td>
+            <td>{{plano.fidelidade}}</td>
+            <td><button (click)="deletaPlano(plano.id)" class="btn btn-primary">Delete</button></td>
+            <td><button [routerLink]="['/planoAdd', plano.id]" routerLinkActive="router-link-active"  class="btn btn-warning">Editar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="text-center">
+    <pagination-controls (pageChange)="p = $event"
+    previousLabel = "Voltar" nextLabel = "Avançar" responsive="true"></pagination-controls>
+
+</div>

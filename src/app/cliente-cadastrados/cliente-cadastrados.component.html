@@ -1,0 +1,73 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/administrador">Graficos e informação</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/clienteCadastrados">Clientes Cadastrados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/planosadmin">Planos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/administrador">Combos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/usuarios">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/postadmin">Post de Manutenção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  btn" (click)="sair()">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<form class="form-inline my-4">
+    <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome"
+            placeholder="Pesquisa por Nome">
+    </div>
+    <button type="button" (click)="consultarCli()" class="btn btn-primary mb-2">Buscar</button>
+</form>
+
+<!--TABLE-->
+<table class="table my-4">
+    <thead class="table-info">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">TELEFONES</th>
+            <th scope="col">LOGRADOURO</th>
+            <th scope="col">Plano</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let student of students | paginate: { itemsPerPage:5, currentPage: p, totalItems : total }; let i = index">
+            <td scope="row">{{student.id}}</td>
+            <td class="btn">{{student.nome}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.telefones}}</td>
+            <td>{{student.logradouro}}</td>
+            <td>{{student.plano}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="text-center">
+    <pagination-controls (pageChange)="p = $event;" previousLabel="Voltar" nextLabel="Avançar"
+        responsive="true"></pagination-controls>
+
+</div>

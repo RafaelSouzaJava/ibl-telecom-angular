@@ -1,0 +1,60 @@
+.scroolspySite{
+    position: relative;
+    overflow: auto;
+    height: 345px;
+}
+
+blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+  }
+
+  .footer {
+      text-align: center;
+      margin-left: 35%;   
+
+  }
+
+  cite {
+      margin-left: 1%;
+  }
+
+  .body1 {
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+  }
+
+  .cards {
+      background: #a8dadc;
+  }
+
+  .promo {
+      font-size: 9px;
+  }
+
+ 
+
+  .pags {
+      background: #C5DECD;
+  }
+
+  .img2 {
+      height: 45px;
+  }
+
+  .rodape {
+      background: #A1B8BC;
+      width: 100%;
+  }
+
+
+
+ 
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

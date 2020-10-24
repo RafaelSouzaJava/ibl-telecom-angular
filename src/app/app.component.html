@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+  <a class="navbar-brand" href="#">
+    <img src="assets/imgs/IBL-TELECOM-LOGO.png" width="85px" alt="logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-trigger="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+        <a class="nav-link " href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/planos">Planos</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Informações
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/informacao">Repetidores e Wi-FI</a>
+          <a class="dropdown-item" routerLink="/manutencao">Manutenção de rede</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/jogos">Jogos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/contatos" routerLinkActive="active">Contato</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item hide">
+        <a class="nav-link text-dark" href="#"><span class="material-icons  phone">
+            call
+          </span>(85) 98611-6833</a>
+      </li>
+
+
+      <li class="nav-item ">
+        <a class="nav-link " href="https://ibltelecom.gesprov.com.br/central" target="_blank">
+          <span class="material-icons  email">
+            account_circle
+          </span> Central do Cliente
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

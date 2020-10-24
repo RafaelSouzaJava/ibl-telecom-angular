@@ -1,0 +1,13 @@
+a {
+    color:  deepskyblue!important;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #000!important;
+}
+
+table {
+    width: 100%;
+  }

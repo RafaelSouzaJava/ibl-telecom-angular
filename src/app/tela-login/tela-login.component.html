@@ -1,0 +1,102 @@
+<div class="corbody">
+    <form>
+
+        <img class="img1" src="assets/imgs/IBL-TELECOM-LOGO.png" alt="logo">
+
+        <h4 class="h4login">IBL Telecom</h4>
+
+        <div class="form-group">
+
+            <label for="usuario">Login:</label>
+            <input type="text" class="form-control" #login="ngModel" [(ngModel)]="usuario.login" id="login" name="login"
+                placeholder="Informe o Login" required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="usuario">Senha:</label>
+            <input type="password" class="form-control" #senha="ngModel" [(ngModel)]="usuario.senha" id="senha"
+                name="senha" placeholder="Informe a Senha" required>
+
+        </div>
+
+        <div>
+            <button type="button" [disabled]="login.invalid || senha.invalid" class="btn btn-primary buttonclas"
+                (click)="logar()">Acessar</button>
+
+        </div>
+    </form>
+
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="row  rodape">
+
+        <div class="col-sm-4">
+            <img src="assets/imgs/IBL-TELECOM-LOGO.png" class="img2 " alt="logo">
+            <h5 class="text-white" style="font-size: 16px;">Quem somos</h5>
+            <p style="font-size: 12px;" class="text-white">Fornecemos soluções de telecomunicaçãohá mais de 15 anos.
+                Estabelecer um relacionamento duradouro com nossos clientes é nosso objetivo final,
+                que pretendemos alcançar ao apoiar sua instalação e garatir que você seja informado sobre quaisquer
+                desenvolvimentos em tecnologia que possam melhorar ainda mais o sucesso de seus negócios.
+            </p>
+
+        </div>
+
+        <div class="col-sm-4 text-center">
+
+            <h5 class=" text-white" style="font-size: 16px; margin-top: 6px;">Contato</h5>
+            <p style="font-size: 13px; margin-top: 1%;" class="text-white">Endereço: Rua 03 n°381, Parque Santana
+                Fortaleza-ce</p>
+            <p style="font-size: 13px; margin-top: -5%;" class="text-white">Telefone: (85) 3298-3648</p>
+            <p style="font-size: 13px; margin-top: -5%;" class="text-white">Whatsapp:<a class="text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank">
+                    (85) 98611-6833 </a></p>
+            <p style="font-size: 13px; margin-top: -5%;" class="text-white">E-mail: <a class="text-white"
+                    href="mailto:suportematelecom@outlook.com"> suportematelecom@outlook.com</a></p>
+
+            <h5 class="text-center text-white" style="font-size: 16px; margin-top: -2%;">Menu</h5>
+            <div class="list-group text-center ">
+                <a class="text-white" style="font-size: 13px;" href="#">Perfil</a>
+                <a class="text-white" style="font-size: 13px;" [routerLink]="[ '/contato' ]"
+                    routerLinkActive="active">Contato</a>
+                <a class="text-white" style="font-size: 13px;" [routerLink]="[ '/planos' ]"
+                    routerLinkActive="active">Planos</a>
+                <a class="text-white" style="font-size: 13px;" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Acesso do Cliente</a>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4 ">
+
+            <h5 class="text-center text-white" style="font-size: 16px; margin-top: 6px;">Redes Sociais</h5>
+            <div class="btn-group-vertical btn-block btn-group-sm" role="group">
+                <a class="btn btn-primary text-white" href="#">Facebook</a>
+                <a class="btn btn-info text-white" href="#">Instagram</a>
+                <a class="btn btn-warning text-white"
+                    href="https://api.whatsapp.com/send?phone=5585986116833 &text=Olá Como podemos ajudar?"
+                    target="_blank">
+                    Whatsapp</a>
+                <a class="btn btn-success text-white" href="https://ibltelecom.gesprov.com.br/central"
+                    target="_blank">Central do Cliente</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 ">
+        <hr>
+    </div>
+    <div class="col-12 mt-1 ">
+        <blockquote class="blockquote text-center">
+            <p class="mb-0" style="font-size: 12px;">Desenvolvido por Rafael de Souza Alves</p>
+            <footer class="blockquote-footer" style="font-size: 10px;">Tecnologias utiliza:<cite title="Titulo">Java,
+                    Spring, Bootstrap, Angular, Amazon, mysql</cite></footer>
+        </blockquote>
+    </div>
+
+</div>
+
+
+<router-outlet></router-outlet>
